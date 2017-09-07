@@ -1,0 +1,179 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:100);
+
+/*
+ * Elementos
+ */
+body {
+  font-family: 'Roboto', serif;
+}
+
+/*
+ * Layout
+ */
+ .weather-app {
+   width: 80vw;
+   padding: 1em 0;
+   margin: 0 auto;
+ }
+
+ .filter-box {
+   margin: 2em 0;
+ }
+
+/*
+ * Componentes
+ */
+.header-app {
+  border-bottom: 1px solid #ccc;
+  position: relative;
+}
+  .header-app > .title-app {
+    color: #333;
+    font-size: 3em;
+    margin: 0;
+    padding: 0.2em 0;
+  }
+
+  .title-app > .logo {
+    vertical-align: middle;
+  }
+
+  .header-app > .nav-app {
+    position: absolute;
+    top: 2.8em;
+    right: 0;
+  }
+
+
+.nav-app > .link {
+  font-size: 1.1em;
+  color: #37a3fe;
+  padding: 0 1em;
+}
+
+.nav-app > .link:hover {
+  text-decoration: none;
+}
+
+.nav-app > .link:last-child {
+  padding-right: 0;
+}
+
+.weather-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.caption-table {
+  font-size: 1.6em;
+  color: #aaa;
+}
+  .caption-table .title {
+    border-bottom: 3px solid #ccc;
+    padding: 0.2em 1em;
+    font-size: 1.2em;
+    font-weight: normal;
+  }
+
+.row-table {
+  border-bottom: 1px solid #ccc;
+}
+
+.row-table:last-child {
+  border-bottom: none;
+}
+  .row-table > .cel {
+    font-size: 2em;
+
+    color: #333;
+    padding: 1.8em 0;
+  }
+
+  .row-table > .cel.-title {
+    font-size: 1.4em;
+    padding-left: 0.4em;
+  }
+
+  .row-table > .cel.-center {
+    text-align: center;
+  }
+
+  .row-table > .cel.-left {
+    text-align: left;
+  }
+
+  .row-table > .cel.-right {
+    text-align: right;
+  }
+
+  .row-table > .cel > .temp {
+    color: #fff;
+    padding: 0.95em 0.8em;
+    box-shadow: 0 0 0 3px #fff, 0 0 0 8px #eee;
+    border-radius: 50%;
+  }
+
+  .row-table > .cel > .temp.-cool {
+    background: #37a3fe;
+  }
+
+  .row-table > .cel > .temp.-hot {
+    background: #fab113;
+  }
+
+.search-component {
+  display: flex;
+  justify-content: center;
+}
+  .search-component > .field {
+    box-sizing: border-box;
+    height: 45px;
+    font-size: 1.2em;
+    padding: 0.5em;
+    border: 1px solid #ddd;
+    margin-right: 0.2em;
+  }
+
+  .search-component > .field:focus {
+    box-shadow: none;
+  }
+
+  .search-component > .action {
+    border: none;
+    color: #fff;
+    font-size: 1.2em;
+    padding: 0.55em 1em;
+    background: #37a3fe;
+    cursor: pointer;
+  }
+    .search-component > .action.-secondary {
+      background: #aaa;
+    }
+
+.loading-component {
+  background: #fff;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  transition: all 0.5s ease-out;
+}
+  .loading-component.-disabled {
+    opacity: 0;
+    top: -100%;
+  }
+
+.super-badge {
+  display: block;
+  background: #37a3fe;
+  font-weight: bold;
+  color: #fff;
+  padding: 0.8em 0.4em;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.notification {
+  text-align: center;
+}
